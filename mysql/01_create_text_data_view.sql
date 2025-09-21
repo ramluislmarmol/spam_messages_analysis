@@ -1,7 +1,7 @@
 CREATE OR REPLACE VIEW text_data AS
 WITH cte AS (
     SELECT
-        hashed_cellphone_number,
+		id,
         COALESCE(TRIM(text), '') AS text,
         REGEXP_REPLACE(COALESCE(TRIM(text), ''), '[[:space:]]', '') AS no_space_text,
         REGEXP_REPLACE(COALESCE(TRIM(text), ''), '[A-Z]', '') AS no_upper_text,
@@ -11,7 +11,7 @@ WITH cte AS (
     FROM spam_messages
 )
 SELECT
-    hashed_cellphone_number,
+	id,
     CHAR_LENGTH(text) AS char_length,
     CASE 
         WHEN CHAR_LENGTH(text) = 0 THEN 0 
