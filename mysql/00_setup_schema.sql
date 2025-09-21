@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS spam_messages (
     carrier VARCHAR(50)
 );
 
-LOAD DATA LOCAL INFILE 'C:/Users/turnipxd/Documents/ram_files/project_repos/spam_messages_analysis/data/spam_messages.csv'
+LOAD DATA LOCAL INFILE '<insert path here>'
 INTO TABLE spam_messages
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
