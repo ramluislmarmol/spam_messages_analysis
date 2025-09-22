@@ -3,7 +3,7 @@ WITH cte1 AS (
 	SELECT 
 		id, TRIM(text) AS text,
 		REGEXP_REPLACE(text, '[[:space:]]', '') AS no_space_text,
-		REGEXP_REPLACE(text, '[A-Z]', '') AS no_upper_text,
+		REGEXP_REPLACE(text, '[[:upper:]]', '', 1, 0, 'c') AS no_upper_text,
 		REGEXP_REPLACE(text, '[[:digit:]]', '') AS no_digit_text,
 		REGEXP_REPLACE(text, '[[:punct:]]', '') AS no_punc_text,
 		REGEXP_REPLACE(text, '[^[:alnum:]]', '') AS alnum_text
