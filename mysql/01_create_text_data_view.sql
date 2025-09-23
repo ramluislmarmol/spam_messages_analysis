@@ -18,15 +18,7 @@ WITH cte1 AS (
 		CHAR_LENGTH(text) - CHAR_LENGTH(no_punc_text) AS punctuation_count,
 		CHAR_LENGTH(text) - CHAR_LENGTH(alnum_text) AS non_alnum_count,
 		CASE WHEN REGEXP_LIKE(text, 'http|www.|.com|bit.|.site', 'i') THEN TRUE
-			 ELSE FALSE END AS has_url,
-		CASE WHEN REGEXP_LIKE(text, 'free|win|award|reward|claim|urgent|limited|offer|deal|prize|discount', 'i') THEN TRUE
-			 ELSE FALSE END AS has_spam_keywords,
-		CASE WHEN REGEXP_LIKE(text, 'money|cash|payment|credit|bank|account|deposit|php', 'i') THEN TRUE
-			 ELSE FALSE END AS has_financial_keywords,
-		CASE WHEN REGEXP_LIKE(text, 'sale|exclusive|special|bonus|save|get|shop|promo|venue', 'i') THEN TRUE
-			 ELSE FALSE END AS has_promotional_keywords,
-		CASE WHEN REGEXP_LIKE(text, 'verify|account|password|login|personal|security', 'i') THEN TRUE
-             ELSE FALSE END AS has_info_keywords
+			 ELSE FALSE END AS has_url
     FROM cte1
 ), cte3 AS (
 	SELECT 
