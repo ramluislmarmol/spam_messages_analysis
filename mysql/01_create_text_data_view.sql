@@ -16,7 +16,7 @@ WITH cte1 AS (
 		CHAR_LENGTH(text) - CHAR_LENGTH(no_upper_text) AS uppercase_count,
 		CHAR_LENGTH(text) - CHAR_LENGTH(no_digit_text) AS digit_count,
 		CHAR_LENGTH(text) - CHAR_LENGTH(no_punc_text) AS punctuation_count,
-		CHAR_LENGTH(text) - CHAR_LENGTH(alnum_text) AS non_alnum_count,
+		CHAR_LENGTH(no_space_text) - CHAR_LENGTH(alnum_text) AS non_alnum_count,
 		CASE WHEN REGEXP_LIKE(text, 'http|www.|.com|bit.|.site', 'i') THEN TRUE
 			 ELSE FALSE END AS has_url
     FROM cte1
