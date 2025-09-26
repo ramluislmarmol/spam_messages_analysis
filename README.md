@@ -12,7 +12,7 @@ TODO: ADD INSIGHTS
 
 ## Tools and Methodology
 ### Power BI
-Used Power BI to create visualizations and design a dashboard. Also utilized DAX Expressions such as:
+Used Power BI to create visualizations and design a dashboard. Also utilized DAX Expressions to generate month and hour tables as x-axis for the line charts.
 ```
 months = 
 ADDCOLUMNS (
@@ -27,9 +27,8 @@ ADDCOLUMNS (
     "hour_str", FORMAT ( [Value], "00" ) & ":00"
 )
 ```
-to generate month and hour tables as x-axis for the line charts.
 ### MySQL
-Used MySQL for database management and data manipulation. Used the built-in `REGEXP` functions to analyze texts:
+Used MySQL for database management and data manipulation. Used the built-in `REGEXP` functions to analyze texts.
 ```
 SELECT
     id,
