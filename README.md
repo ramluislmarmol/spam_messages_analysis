@@ -8,7 +8,10 @@ This project aims on analyzing spam messages from various mobile carriers in the
 ![spam_messages_dashboard.gif](/powerbi/exports/spam_messages_dashboard.gif
 ) 
 ### Key Insights
-TODO: ADD INSIGHTS
+- The average words per spam message received is 22.83 words, while the average characters is 135.89 characters.
+- TNT, Smart and Smart/TNT has the most spam messages received.
+- Out of the 1014 messages, 38% of which contains a link.
+- Total messages per month peaks on February to May, with another sudden spike during the holidays.
 
 ## Tools and Methodology
 ### Power BI
