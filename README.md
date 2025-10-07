@@ -1,7 +1,7 @@
 # Project Description
 
 ## Rationale
-This project aims on analyzing spam messages from various mobile carriers in the Philippines using an interactive dashboard. It uses MySQL for database management and Power BI for dynamic data visualization.
+This project aims on analyzing spam messages from various mobile carriers in the Philippines using an interactive dashboard. It uses MySQL for database management and preliminary manipulation and Power BI for dynamic data visualization. This project's goal is to inform the public of spam messages, giving them an overview on where the messages come from, whats inside them and the general trends of messages.
 
 ## Project Output
 ### Dashboard
